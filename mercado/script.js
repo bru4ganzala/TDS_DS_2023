@@ -18,12 +18,19 @@ function adicionar(item) {
     adiciona_lista();
   }
 
+  if (item) {
+    if (item.checked){
+      li.setAttribute("class", "checked");
+    }
+  }
+
   input.value = "";
   input.focus();
 }
 
 window.document.querySelector("ul").addEventListener("click", (e) => {
   e.target.classList.toggle("checked");
+  adiciona_lista();
 });
 
 window.document.getElementById("input").addEventListener("keypress", (e) => {
@@ -44,7 +51,7 @@ function adiciona_lista() {
   const lista_de_li = window.document.querySelectorAll("li");
   const lista = [];
   lista_de_li.forEach((item) => {
-    lista.push({ texto: item.innerText });
+    lista.push({ texto: item.innerText, checked: item.className == "checked" });
   });
 
   window.localStorage.setItem("lista", JSON.stringify(lista));
