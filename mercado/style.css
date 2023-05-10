@@ -6,3 +6,24 @@
 ul {
     list-style: none;
 }
+
+body {
+    padding: 0%;
+    margin: 0%;
+    background-color: #220126;
+    background-image: url(https://th.bing.com/th/id/R.9f1919dd6053ff36132014fdf978bd78?rik=F4KlhoLmj66Vww&pid=ImgRaw&r=0);
+    text-align: center;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+    background-color: rgba(16, 15, 15, 0.947);
+    padding: 40px;
+    border-radius: 2px;
+    width: 280px;
+    background-position: center;
+    display: flex;
+    align-items: center; 
+    text-align: center;
+}
